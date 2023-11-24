@@ -35,6 +35,7 @@ public class Model {
                 buttons[index] ="O";
             }
             isPlayerX = !isPlayerX;
+
             checkForWinner();
 
             if (!gameOver && !isPlayerX) {
@@ -45,7 +46,7 @@ public class Model {
     }
 
     private void makeComputerMove() {
-        int row, col;
+        int row;
 
         do {
             row = random.nextInt(9);
@@ -58,16 +59,16 @@ public class Model {
     private void checkForWinner() {
         boolean isTie = false;
         for (int i = 0; i < 3; i++) {
-            if (checkLine(buttons[i*3 + 0], buttons[i*3 + 1], buttons[i*3 + 2]) ||
-                    checkLine(buttons[0*3 + i], buttons[1*3 + i], buttons[2*3 + i])) {
+            if (checkLine(buttons[i * 3 + 0], buttons[i * 3 + 1], buttons[i * 3 + 2]) ||
+                    checkLine(buttons[0 * 3 + i], buttons[1 * 3 + i], buttons[2 * 3 + i])) {
                 gameOver = true;
                 break;
             }
         }
 
         if (!gameOver) {
-            if (checkLine(buttons[0*3 + 0], buttons[1*3 + 1], buttons[2*3 + 2]) ||
-                    checkLine(buttons[0*3 + 2], buttons[1*3 + 1], buttons[2*3 + 0])) {
+            if (checkLine(buttons[0 * 3 + 0], buttons[1 * 3 + 1], buttons[2 * 3 + 2]) ||
+                    checkLine(buttons[0 * 3 + 2], buttons[1 * 3 + 1], buttons[2 * 3 + 0])) {
                 gameOver = true;
             } else {
                     isTie = Arrays.stream(buttons).noneMatch(String::isEmpty);
@@ -124,5 +125,8 @@ public class Model {
 
     public String computerScore() {
         return String.valueOf(computerScore);
+    }
+    public boolean isGameOver() {
+        return gameOver;
     }
 }
