@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tictactoe.Controller">
+   <children>
+      <FlowPane layoutX="92.0" layoutY="70.0" prefHeight="261.0" prefWidth="417.0">
+         <children>
+            <Button fx:id="button1" mnemonicParsing="false" prefHeight="87.0" prefWidth="139.0" />
+            <Button fx:id="button2" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="139.0" />
+            <Button fx:id="button3" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="139.0" />
+            <Button fx:id="button4" layoutX="114.0" layoutY="10.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="139.0" />
+            <Button fx:id="button5" layoutX="166.0" layoutY="10.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="139.0" />
+            <Button fx:id="button6" layoutX="218.0" layoutY="10.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="139.0" />
+            <Button fx:id="button7" layoutX="270.0" layoutY="10.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="139.0" />
+            <Button fx:id="button8" layoutX="322.0" layoutY="10.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="139.0" />
+            <Button fx:id="button9" layoutX="322.0" layoutY="10.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="139.0" />
+         </children>
+      </FlowPane>
+      <Button fx:id="restartButton" layoutX="77.0" layoutY="351.0" mnemonicParsing="false" text="New Round" />
+      <Button fx:id="resetButton" layoutX="443.0" layoutY="351.0" mnemonicParsing="false" text="Reset Score" />
+      <TextField fx:id="Human_score" layoutX="226.0" layoutY="337.0" prefHeight="25.0" prefWidth="118.0" text="Human score: " />
+      <TextField fx:id="Computer_score" layoutX="226.0" layoutY="364.0" prefHeight="25.0" prefWidth="118.0" text="Computer score:" />
+   </children>
+</AnchorPane>
